@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Input Element Demo</title>
+  </head>
+  <body>
+    <input type="text" id="myInput">
+    <p id="myParagraph"></p>
+    <script>
+      const input = document.querySelector('#myInput');
+      const paragraph = document.querySelector('#myParagraph');
+
+      input.addEventListener('input', () => {
+        paragraph.textContent = input.value;
+      });
+    </script>
+  </body>
+</html>

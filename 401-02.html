@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+    <style>
+      .blue-background {
+        background-color: blue;
+      }
+      .palevioletred-background {
+        background-color: palevioletred;
+      }
+      .green-background {
+        background-color: green;
+      }
+      .lime-background {
+        background-color: lime;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="has-children">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+    </ul>
+    <script>
+      const list = document.querySelector('.has-children');
+      const firstChild = list.firstElementChild;
+      const lastChild = list.lastElementChild;
+      const ninthChild = list.children[8];
+      const evenChildren = document.querySelectorAll('.has-children li:nth-child(even)');
+
+      firstChild.classList.add('blue-background');
+      lastChild.classList.add('palevioletred-background');
+      ninthChild.classList.add('green-background');
+
+      for (let i = 0; i < evenChildren.length; i++) {
+        evenChildren[i].classList.add('lime-background');
+      }
+    </script>
+  </body>
+</html>
